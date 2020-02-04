@@ -7,13 +7,22 @@ import { HeaderComponent } from "./header/header.component";
 import { HomeComponent } from "./home/home.component";
 import { AboutComponent } from "./about/about.component";
 import { ROUTES } from "./app.routes";
-import { RestaurantsComponent } from './restaurants/restaurants.component';
-import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
+import { RestaurantsComponent } from "./restaurants/restaurants.component";
+import { RestaurantComponent } from "./restaurants/restaurant/restaurant.component";
+import { RestaurantsService } from "./restaurants/restaurants.service";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, AboutComponent, RestaurantsComponent, RestaurantComponent],
-  imports: [BrowserModule, RouterModule.forRoot(ROUTES)],
-  providers: [],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    HomeComponent,
+    AboutComponent,
+    RestaurantsComponent,
+    RestaurantComponent
+  ],
+  imports: [BrowserModule, RouterModule.forRoot(ROUTES), HttpClientModule],
+  providers: [RestaurantsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
