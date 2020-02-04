@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
+  background-color: #eee;
   color: #555;
 }
 
@@ -260,4 +261,16 @@ body {
 
 .has-error-block {
   color: #dd4b39;
+}
+
+.main-footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+}
+
+.content-wrapper {
+  background-color: #eee;
 }
