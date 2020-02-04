@@ -22,7 +22,5 @@ export class MenuComponent implements OnInit {
     );
   }
 
-  addMenuItem(event) {
-    console.log(event);
-  }
+  addMenuItem(event) {}
 }
