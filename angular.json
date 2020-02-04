@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "mt",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -28,7 +28,11 @@
               "node_modules/admin-lte/plugins/iCheck/flat/red.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/admin-lte/bootstrap/js/bootstrap.min.js",
+              "node_modules/admin-lte/dist/js/app.min.js"
+            ]
           },
           "configurations": {
             "production": {
