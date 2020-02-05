@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule, LOCALE_ID } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { registerLocaleData } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
@@ -19,7 +20,9 @@ import { MenuItemComponent } from "./restaurant-detail/menu-item/menu-item.compo
 import { ReviewsComponent } from "./restaurant-detail/reviews/reviews.component";
 import { ShoppingCartService } from "./restaurant-detail/shopping-cart/shopping-cart.service";
 import localePt from "@angular/common/locales/pt";
-import { OrderComponent } from './order/order.component';
+import { OrderComponent } from "./order/order.component";
+import { InputComponent } from './shared/input/input.component';
+import { RadioComponent } from './shared/radio/radio.component';
 registerLocaleData(localePt);
 
 @NgModule({
@@ -35,9 +38,16 @@ registerLocaleData(localePt);
     ShoppingCartComponent,
     MenuItemComponent,
     ReviewsComponent,
-    OrderComponent
+    OrderComponent,
+    InputComponent,
+    RadioComponent
   ],
-  imports: [BrowserModule, RouterModule.forRoot(ROUTES), HttpClientModule],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(ROUTES),
+    HttpClientModule,
+    FormsModule
+  ],
   providers: [
     RestaurantsService,
     ShoppingCartService,
