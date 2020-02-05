@@ -19,7 +19,7 @@
             </th>
 
             <td class="text-right">
-              {{ item.value() | currency: "BRL":true }}
+              {{ item.value() | currency: "BRL":"code" }}
             </td>
             <td class="text-right">
               <a (click)="removeItem(item)" class="btn btn-sm danger"
@@ -31,7 +31,7 @@
           <tr>
             <th>Total:</th>
 
-            <td class="text-right">{{ total() | currency: "BRL":true }}</td>
+            <td class="text-right">{{ total() | currency: "BRL":"code" }}</td>
           </tr>
         </tbody>
       </table>
@@ -42,7 +42,7 @@
       <button type="button" class="btn btn-danger" (click)="clear()">
         <i class="fa fa-trash"></i> Limpar
       </button>
-      <a href="order.html" class="btn btn-success"
+      <a [routerLink]="['/order']" class="btn btn-success"
         ><i class="fa fa-credit-card"></i> Fechar Pedido</a
       >
     </div>
